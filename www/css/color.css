@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+body {
+    background-color: #909090;
+    color: floralwhite;
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+/* -------------------------- HEADER STYLE ------------------------- */
+
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 500;
+    background-color: #737373;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 2px 6px 0 rgba(0, 0, 0, 0.19);
+}
+    #history-button {   
+        padding: 9px 4px;
+        float: left;
+        width: 10%;
+    }
+        #history-button:active > .material-icons {
+            transform: scale(0.7);
+        }
+    .title {
+        float: left;
+        width: 48%;
+        padding: 14px 5px;
+        font-size: 1.13em;
+    }
+    #prev-button {
+        width: 10%;
+        padding: 9px 4px;      
+        float: right;
+    }
+        #prev-button:active > .material-icons {
+            transform: scale(0.7);
+        }
+    #next-button {
+        width: 10%;
+        padding: 9px 4px;      
+        float: right;
+    }
+        #next-button:active > .material-icons {
+            transform: scale(0.7);
+        }
+    .donate {
+        padding: 9px 4px;
+        float: right;
+        width: 10%;
+    }
+        .donate:active > .material-icons {
+            transform: scale(0.7);
+        }
+
+/* -------------------------- HISTORY STYLE ------------------------ */
+
+#history {
+    position: fixed;
+    top: 50px;
+    left: -190px;
+    width: 190px;
+    transition: all .3s ease-in-out;
+    z-index: 100;
+    background-color: rgba(77, 77, 77, 0.5);
+    bottom: 134px;
+    overflow: auto;
+}
+    .color-sample {
+        transition: all .25s ease-in-out;
+        width: 180px;
+        height: 50px;
+        z-index: 101;
+        margin: 2px 5px;
+        position: initial;
+        left: -190px;
+        float: left;
+    }
+        .color-name {
+            width: 100%;
+            padding-top: 1px;
+            padding-left: 3px;
+        }
+        .color-hex {
+            text-align: right;
+            width: 59%;
+            padding-top: 10px;
+            padding-right: 3px;
+            float: right;
+        }
+    #delete-history {
+        float: right;
+        width: 100%;
+    }
+        #del-buttons {
+            margin: 5px;
+        }
+    
+            #del-one {
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+            #del-all {
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+            #del-one:active > .material-icons {
+                transform: scale(0.7);
+            }
+            #del-all:active > .material-icons {
+                transform: scale(0.7);
+            }
+
+/* --------------------------- IMAGE STYLE ------------------------- */
+.zoomable {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    bottom: 134px;
+    overflow: auto;
+    overflow-x: auto;
+    display: flex;
+    background: url(../img/load-anim/Preloader.gif) center no-repeat;
+    background-size: 80px;
+}
+img {
+    width: 100%;
+    margin: auto;
+    vertical-align: middle;
+    transition: all .3s ease-in-out;
+}
+
+/* --------------------------- BUTTONS STYLE ------------------------- */
+
+.button-div {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.button {
+    width: 20%;
+    padding: 17px 0;
+    text-align: center;
+    float: left;
+    background-color: #696969;
+}
+
+#camera-button {
+    background-color: #737373;
+}
+
+#zoom-in-button {
+    background-color: #5f5f5f;
+}
+
+#zoom-out-button {
+    background-color: #5f5f5f;
+}
+
+/* --------------------------- URL INPUT STYLE ------------------------- */
+
+#image-url {
+    position: fixed;
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+    background-color: dimgrey;
+}
+    #url-input {
+        margin: 15px 7px;
+        padding: 10px;
+        width: 77%;
+    }
+
+    #url-confirm {
+        float: right;
+        padding: 20px 6px;
+        background-color: #737373;
+    }
+    
+    #url-confirm:active > .material-icons {
+        transform: scale(0.7);
+    }
+
+/* --------------------------- PICKED COLOR STYLE ------------------------- */
+
+#color {
+    width: 100%;
+    font-size: 1em;
+    position: absolute;
+    bottom: 69px;
+    padding: 23px 0 23px 0;
+    text-align: center;
+    background-color: #777777;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+#color p {
+    transition: all .1s ease-out;
+}
+    #color p:active {
+        transform: scale(1.3);
+    }
+
+/* --------------------------- ICONS STYLE ------------------------- */
+
+.material-icons {
+    font-size: 2em !important;
+    transition: all .2s ease-in-out;
+}
+
+    .button:active > .material-icons {
+        transform: scale(0.7);
+    }
