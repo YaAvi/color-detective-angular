@@ -14,6 +14,7 @@ touch the color name to hear it (tts).
 
 view history using the top left button.
 
-hex value in history touch it to see rgb value.
+rgb value in history.
 
-You can donate using the top right button. ^_^
+You can browse images using the top right buttons.
+Donate using the $ button. ^_^
