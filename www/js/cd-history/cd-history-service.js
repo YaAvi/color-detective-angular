@@ -1,4 +1,4 @@
-cda.factory('cdHistory', function () {
+cda.factory('cdHistory', function ($rootScope) {
     'use strict';
     var colorHistory = [],
         history = document.querySelector('#history'),
@@ -27,7 +27,7 @@ cda.factory('cdHistory', function () {
         removeAll = function () {
             var len = colorHistory.length;
             for (var i = 0; i < len; i++) {
-                colorHistory.pop();
+                remove();
             }
         },
         getColorHistory = function () {

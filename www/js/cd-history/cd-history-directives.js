@@ -3,7 +3,7 @@ cda.directive('cdColorSample', function () {
     return {
         restrict: 'E',
         replace: true,
-        template: '<div class="color-sample" style="background-color:{{color.style.color}}; color:{{color.style.font}}">' +
+        template: '<div>' +
                     '<div class="color-name">' +
                         '<p>{{color.name}}</p>' +
                     '</div>' +

@@ -1,3 +1,3 @@
 'use strict';
 
-var cda = angular.module('cda', ['mn']);
+var cda = angular.module('cda', ['ngAnimate', 'mn']);
