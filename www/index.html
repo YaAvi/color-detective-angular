@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="cda">
+<html lang="en">
 
 <head>
     <title>Color Detective</title>
@@ -8,9 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/color.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" href="fonts/material/material-icons.css">
+    
 </head>
 
-<body ng-cloak ng-controller="cdBackButton">
+<body id="app" ng-cloak ng-controller="cdBackButton">
     <div><cd-head/></div>
 
     <div id="history" ng-controller="cdHistoryCtrl">
@@ -36,7 +37,6 @@
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-detect-color-service.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-current-color-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-3rd-party.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-rgb-to-hex.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-font-color.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-back-button.js"></script>

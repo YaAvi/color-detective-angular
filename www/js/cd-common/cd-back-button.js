@@ -10,7 +10,5 @@ cda.controller('cdBackButton', function (cdUrl, cdHistory) {
         // Register the event listener
         document.addEventListener('backbutton', onBackKeyDown, false);
     }
-    angular.element(document).ready(function () {
-        document.addEventListener('deviceready', onDeviceReady, false);
-    });
+    document.addEventListener('deviceready', onDeviceReady, false);
 });

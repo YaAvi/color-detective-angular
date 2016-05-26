@@ -5,12 +5,10 @@ cda.factory('cdImageSource', function () {
         prevButton = document.getElementById('prev-button'),
         nextButton = document.getElementById('next-button');
     function disable(button) {
-        button.style.pointerEvents = "none";
-        button.style.color = "#777";
+        button.className = "disabled";
     }
     function enable(button) {
-        button.style.pointerEvents = "auto";
-        button.style.color = "floralwhite";
+        button.className = "enabled";
     }
     function add(src) {
         if (sources.indexOf(src) < 0) {

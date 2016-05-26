@@ -240,3 +240,8 @@ img {
     .button:active > .material-icons {
         transform: scale(0.7);
     }
+
+.disabled {
+    pointer-events: none;
+    color: #777;
+}
