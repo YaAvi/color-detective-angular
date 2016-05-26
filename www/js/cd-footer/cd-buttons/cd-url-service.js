@@ -8,10 +8,10 @@ cda.factory('cdUrl', function (cdImageSource) {
     }
     
     function urlHandle() {
-        imageUrl.style.bottom = 0;
+        imageUrl.className = 'open-url';
     }
     function closeUrl() {
-        imageUrl.style.bottom = -70 + 'px';
+        imageUrl.className = 'close-url';
     }
     function confirmUrl() {
         var url = urlInput.value;

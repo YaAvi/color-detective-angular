@@ -1,14 +1,14 @@
 cda.factory('cdHistory', function () {
     'use strict';
     var colorHistory = [],
-        history = angular.element(document.querySelector('#history')),
+        history = document.querySelector('#history'),
         open = false,
         openHistory = function () {
-            history.css('left', '0');
+            history.className = 'open-history';
             open = true;
         },
         closeHistory = function () {
-            history.css('left', '-190px');
+            history.className = 'close-history';
             open = false;
         },
         historyButton = function () {

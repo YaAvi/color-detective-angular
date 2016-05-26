@@ -72,11 +72,17 @@ body {
     top: 50px;
     left: -190px;
     width: 190px;
-    transition: all .1s ease;
+    transition: all .2s ease;
     z-index: 100;
     background-color: rgba(77, 77, 77, 0.5);
     bottom: 134px;
     overflow: auto;
+}
+.open-history {
+    transform: translate3d(190px, 0, 0);
+}
+.close-history {
+    transform: translate3d(-190px, 0, 0);
 }
     .color-sample {
         transition: all .25s ease;
@@ -183,6 +189,13 @@ img {
     z-index: 1000;
     transition: all .15s ease;
     background-color: dimgrey;
+}
+
+.open-url {
+    transform: translate3d(0, -70px, 0);
+}
+.close-url {
+    transform: translate3d(0, 70px, 0);
 }
     #url-input {
         margin: 15px 7px;
