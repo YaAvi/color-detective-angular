@@ -72,14 +72,14 @@ body {
     top: 50px;
     left: -190px;
     width: 190px;
-    transition: all .3s ease-in-out;
+    transition: all .1s ease;
     z-index: 100;
     background-color: rgba(77, 77, 77, 0.5);
     bottom: 134px;
     overflow: auto;
 }
     .color-sample {
-        transition: all .25s ease-in-out;
+        transition: all .25s ease;
         width: 180px;
         height: 50px;
         z-index: 101;
@@ -141,7 +141,7 @@ img {
     width: 100%;
     margin: auto;
     vertical-align: middle;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease;
 }
 
 /* --------------------------- BUTTONS STYLE ------------------------- */
@@ -181,7 +181,7 @@ img {
     width: 100%;
     height: 70px;
     z-index: 1000;
-    transition: all .3s ease-in-out;
+    transition: all .15s ease;
     background-color: dimgrey;
 }
     #url-input {

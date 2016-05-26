@@ -2,14 +2,20 @@ cda.factory('cdHistory', function () {
     'use strict';
     var colorHistory = [],
         history = angular.element(document.querySelector('#history')),
-        clicked = false,
+        open = false,
+        openHistory = function () {
+            history.css('left', '0');
+            open = true;
+        },
+        closeHistory = function () {
+            history.css('left', '-190px');
+            open = false;
+        },
         historyButton = function () {
-            if (!clicked) {
-                history.css('left', '0');
-                clicked = true;
+            if (!open) {
+                openHistory();
             } else {
-                history.css('left', '-190px');
-                clicked = false;
+                closeHistory();
             }
         },
         add = function (colorSample) {
@@ -32,6 +38,7 @@ cda.factory('cdHistory', function () {
         add: add,
         remove: remove,
         removeAll: removeAll,
-        history: getColorHistory
+        history: getColorHistory,
+        close: closeHistory
     };
 });

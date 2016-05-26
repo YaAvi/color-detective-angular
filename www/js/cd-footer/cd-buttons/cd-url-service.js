@@ -10,6 +10,9 @@ cda.factory('cdUrl', function (cdImageSource) {
     function urlHandle() {
         imageUrl.style.bottom = 0;
     }
+    function closeUrl() {
+        imageUrl.style.bottom = -70 + 'px';
+    }
     function confirmUrl() {
         var url = urlInput.value;
         if (url) {
@@ -19,11 +22,12 @@ cda.factory('cdUrl', function (cdImageSource) {
                 window.alert("Not an image URL!");
             }
         }
-        imageUrl.style.bottom = -70 + 'px';
+        closeUrl();
     }
     
     return {
         confirm: confirmUrl,
-        openBox: urlHandle
-    }
+        openBox: urlHandle,
+        close: closeUrl
+    };
 });

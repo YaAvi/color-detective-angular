@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="fonts/material/material-icons.css">
 </head>
 
-<body ng-cloak>
+<body ng-cloak ng-controller="cdBackButton">
     <div><cd-head/></div>
 
     <div id="history" ng-controller="cdHistoryCtrl">
@@ -32,6 +32,12 @@
     <script type="text/javascript" charset="utf-8" src="js/lib/angular/angular.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/dist/mn-touch.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-detect-color-service.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-current-color-service.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-3rd-party.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-rgb-to-hex.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-font-color.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-back-button.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-head/cd-head-directives.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-head/cd-head-controller.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-service.js"></script>
@@ -41,11 +47,6 @@
     <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-controller.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-directives.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-data/cd-data.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-detect-color-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-current-color-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-3rd-party.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-rgb-to-hex.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-font-color.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-footer-controller.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-footer-directives.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-zoom-service.js"></script>
