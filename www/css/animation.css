@@ -1,108 +1,31 @@
 /*---------------- ANIMATIONS ---------------*/
 
-@keyframes slide-in {
-    0% {  
-        transform: translate3d(-100%, 0, 0);
-        margin-bottom: -50px;
-        opacity: 0;
-    }
-    
-    60% {
-        transform: translate3d(7%, 0, 0);
-    }
-    
-    75% {
-        transform: translate3d(0, 0, 0);
-    }
-    
-    100% {
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 2px;
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes slide-in {
-    0% {  
-        transform: translate3d(-100%, 0, 0);
-        margin-bottom: -50px;
-        opacity: 0;
-    }
-    
-    60% {
-        transform: translate3d(3%, 0, 0);
-    }
-    
-    75% {
-        transform: translate3d(0, 0, 0);
-    }
-    
-    100% {
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 2px;
-        opacity: 1;
-    }
-}
-
-@keyframes slide-out {
-    0% {  
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 2px;
-        opacity: 1;
-    }
-    
-    15% {
-        transform: translate3d(3%, 0, 0);
-    }
-    
-    75% {
-        transform: translate3d(-100%, 0, 0);
-    }
-    
-    100% {
-        transform: translate3d(-100%, 0, 0);
-        margin-bottom: -50px;
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes slide-out {
-    0% {  
-        transform: translate3d(0, 0, 0);
-        margin-bottom: 2px;
-        opacity: 1;
-    }
-    
-    15% {
-        transform: translate3d(3%, 0, 0);
-    }
-    
-    75% {
-        transform: translate3d(-100%, 0, 0);
-    }
-    
-    100% {
-        transform: translate3d(-100%, 0, 0);
-        margin-bottom: -50px;
-        opacity: 0;
-    }
+.color-samples.ng-enter,
+.color-samples.ng-leave {
+    transition: margin 300ms;
+    -webkit-animation-duration: 700ms;
+    animation-duration: 700ms;
 }
 
 .color-samples.ng-enter,
-.color-samples.ng-leave {
-    -webkit-animation-duration: 400ms;
-    animation-duration: 400ms;
+.color-samples.ng-leave-active {
+    margin-bottom: -50px;
+}
+.color-samples.ng-enter-active {
+    margin-bottom: 2px;
 }
 .color-samples.ng-enter {
-    -webkit-animation-name: slide-in;
-    animation-name: slide-in;
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
 }
 .color-samples.ng-leave {
-    -webkit-animation-name: slide-out;
-    animation-name: slide-out;
+    -webkit-animation-name: rollOut;
+    animation-name: rollOut;
 }
 .ng-enter-stagger,
 .ng-leave-stagger {
+    transition-delay: 150ms;
+    transition-duration: 0;
     -webkit-animation-delay: 150ms;
     animation-delay: 150ms;
     -webkit-animation-duration: 0s;
