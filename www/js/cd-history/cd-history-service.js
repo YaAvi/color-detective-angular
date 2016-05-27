@@ -18,8 +18,25 @@ cda.factory('cdHistory', function ($rootScope) {
                 closeHistory();
             }
         },
+        colorExist = function (colorSample) {
+            if (colorHistory.length > 0) {
+                for (var i = 0; i < colorHistory.length; i++) {
+                    if (colorSample.style.color === colorHistory[i].style.color) {
+                        return i;
+                    }
+                }
+                return -1;
+            }
+            return -1;
+        },
         add = function (colorSample) {
-            colorHistory.unshift(colorSample);
+            var index = colorExist(colorSample);
+            if (index >= 0) {
+                var color = colorHistory.splice(index, 1)[0];
+                colorHistory.unshift(color);
+            } else {
+                colorHistory.unshift(colorSample);
+            }
         },
         remove = function () {
             colorHistory.shift();

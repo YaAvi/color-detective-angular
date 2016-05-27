@@ -5,12 +5,12 @@ cda.factory('cdTouch', function (cdHistory, cdDetectColor, cdCurrentColor, statu
         touchHandler = function (e) {
             var pColor,
                 imageBounds = image.getBoundingClientRect(),
-                xCord = e.coords.start.x, // get x position of touch point relative to left edge (decimal)
-                yCord = e.coords.start.y, // get y position of touch point relative to top edge (decimal)
+                xCord = e.coords.start.x,
+                yCord = e.coords.start.y,
                 canvas = document.createElement('canvas'),
                 ctx = canvas.getContext('2d');
             canvas.width = image.width;
-            canvas.height = image.height + imageBounds.top; // for when the image is not overflowing 
+            canvas.height = image.height + imageBounds.top; // draw it in the same spot
             ctx.drawImage(image, 0, imageBounds.top, image.width, image.height);
 
             pColor = ctx.getImageData(xCord - imageBounds.left, yCord, 1, 1).data;
