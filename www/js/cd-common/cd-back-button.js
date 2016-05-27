@@ -1,4 +1,4 @@
-cda.controller('cdBackButton', function (cdUrl, cdHistory) {
+cda.controller('cdBackButton', ['cdUrl', 'cdHistory', function (cdUrl, cdHistory) {
     'use strict';
     // Handle the back button
     function onBackKeyDown() {
@@ -11,4 +11,4 @@ cda.controller('cdBackButton', function (cdUrl, cdHistory) {
         document.addEventListener('backbutton', onBackKeyDown, false);
     }
     document.addEventListener('deviceready', onDeviceReady, false);
-});
+}]);

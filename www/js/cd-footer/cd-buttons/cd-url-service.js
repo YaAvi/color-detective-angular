@@ -1,4 +1,4 @@
-cda.factory('cdUrl', function (cdImageSource) {
+cda.factory('cdUrl', ['cdImageSource', function (cdImageSource) {
     'use strict';
     var urlInput = document.getElementById('url-input'),
         imageUrl = document.getElementById('image-url');
@@ -29,4 +29,4 @@ cda.factory('cdUrl', function (cdImageSource) {
         openBox: urlHandle,
         close: closeUrl
     };
-});
+}]);

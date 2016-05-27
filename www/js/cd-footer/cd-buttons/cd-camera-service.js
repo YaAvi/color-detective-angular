@@ -1,4 +1,4 @@
-cda.factory('cdCamera', function ($rootScope, camera, cdImageSource) {
+cda.factory('cdCamera', ['$rootScope', 'camera', 'cdImageSource', function ($rootScope, camera, cdImageSource) {
     'use strict';
     var DATA_URL = 0,
         src,
@@ -25,4 +25,4 @@ cda.factory('cdCamera', function ($rootScope, camera, cdImageSource) {
     return {
         capture: capturePhoto
     };
-});
+}]);

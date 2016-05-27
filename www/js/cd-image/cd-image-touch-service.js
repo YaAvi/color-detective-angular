@@ -1,4 +1,4 @@
-cda.factory('cdTouch', function (cdHistory, cdDetectColor, cdCurrentColor, statusbar, cdRgbToHex, cdFontColor) {
+function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, statusbar, cdRgbToHex, cdFontColor) {
     'use strict';
     var image = document.getElementById('camImage'),
         mainColor = document.getElementById('color'),
@@ -37,4 +37,6 @@ cda.factory('cdTouch', function (cdHistory, cdDetectColor, cdCurrentColor, statu
     return {
         handle: touchHandler
     };
-});
+}
+cdTouch.$inject = ['cdHistory', 'cdDetectColor', 'cdCurrentColor', 'statusbar', 'cdRgbToHex', 'cdFontColor'];
+cda.factory('cdTouch', cdTouch);

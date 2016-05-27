@@ -1,4 +1,4 @@
-cda.factory('cdDetectColor', function (clrData) {
+cda.factory('cdDetectColor', ['clrData', function (clrData) {
     'use strict';
     var clsColor;
     // Hex to RGB
@@ -23,4 +23,4 @@ cda.factory('cdDetectColor', function (clrData) {
     return {
         name: colorName
     };
-});
+}]);

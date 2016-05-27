@@ -1,4 +1,4 @@
-cda.controller('cdFooterCtrl', function cdHeadCtrl($scope, cdCurrentColor, cdZoom, cdUrl, cdCamera, cdGallery, cdTTS) {
+function cdHeadCtrl($scope, cdCurrentColor, cdZoom, cdUrl, cdCamera, cdGallery, cdTTS) {
     'use strict';
     $scope.color = cdCurrentColor.get;
     $scope.zoomIn = cdZoom.zoomIn;
@@ -11,4 +11,6 @@ cda.controller('cdFooterCtrl', function cdHeadCtrl($scope, cdCurrentColor, cdZoo
     };
     $scope.openGallery = cdGallery.openGallery;
     $scope.speak = cdTTS.speakColor;
-});
+}
+cdHeadCtrl.$inject = ['$scope', 'cdCurrentColor', 'cdZoom', 'cdUrl', 'cdCamera', 'cdGallery', 'cdTTS'];
+cda.controller('cdFooterCtrl', cdHeadCtrl);

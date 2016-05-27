@@ -1,4 +1,4 @@
-cda.factory('cdHistory', function ($rootScope) {
+cda.factory('cdHistory', ['$rootScope', function ($rootScope) {
     'use strict';
     var colorHistory = [],
         history = document.querySelector('#history'),
@@ -58,4 +58,4 @@ cda.factory('cdHistory', function ($rootScope) {
         history: getColorHistory,
         close: closeHistory
     };
-});
+}]);

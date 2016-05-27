@@ -1,4 +1,4 @@
-cda.factory('cdGallery', function ($rootScope, camera, cdImageSource) {
+cda.factory('cdGallery', ['$rootScope', 'camera', 'cdImageSource', function ($rootScope, camera, cdImageSource) {
     'use strict';
     var DATA_URL = 0,
         PHOTOLIBRARY = 0,
@@ -27,4 +27,4 @@ cda.factory('cdGallery', function ($rootScope, camera, cdImageSource) {
     return {
         openGallery: openPhoto
     };
-});
+}]);

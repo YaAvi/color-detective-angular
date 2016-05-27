@@ -1,4 +1,4 @@
-cda.factory('cdTTS', function (TTS) {
+cda.factory('cdTTS', ['TTS', function (TTS) {
     'use strict';
     function speakColor(colorName) {
         TTS.speak({
@@ -15,4 +15,4 @@ cda.factory('cdTTS', function (TTS) {
     return {
         speakColor: speakColor
     };
-});
+}]);
