@@ -1,17 +1,17 @@
-cda.factory('cdDetectColor', ['clrData', function (clrData) {
+angular.module('cda').factory('cdDetectColor', function (clrData) {
     'use strict';
     var clsColor;
-    // Hex to RGB
-    function hexToR(h) {return parseInt(h.substring(0, 2), 16); } // R
-    function hexToG(h) {return parseInt(h.substring(2, 4), 16); } // G
-    function hexToB(h) {return parseInt(h.substring(4, 6), 16); } // B
+    function hexToRGB(hex, index) {
+        var color = parseInt(hex.substring(index, index + 2), 16);
+        return color;
+    }
     
     function colorName(R, G, B) {
         var minDistance = 7777, distance, red, green, blue;
         for (var clr = 0; clr < clrData.length; clr++) { 
-            red = hexToR(clrData[clr][0]);
-            green = hexToG(clrData[clr][0]);
-            blue = hexToB(clrData[clr][0]);
+            red = hexToRGB(clrData[clr][0], 0);
+            green = hexToRGB(clrData[clr][0], 2);
+            blue = hexToRGB(clrData[clr][0], 4);
             distance = Math.pow((R - red), 2) + Math.pow((G - green), 2) + Math.pow((B - blue), 2);
             if (distance < minDistance) {
                 minDistance = distance;
@@ -23,4 +23,4 @@ cda.factory('cdDetectColor', ['clrData', function (clrData) {
     return {
         name: colorName
     };
-}]);
+});

@@ -1,0 +1,13 @@
+.material-icons {
+    font-size: 2em !important;
+    transition: all .2s ease-in-out;
+}
+
+.button:active > .material-icons {
+    transform: scale(0.7);
+}
+
+.disabled {
+    pointer-events: none;
+    color: #777;
+}

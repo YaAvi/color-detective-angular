@@ -1,8 +1,8 @@
-function cdImageCtrl($scope, cdTouch, cdImageSource) {
+function cdImageCtrl(cdTouch, cdImageSource, cdZoom) {
     'use strict';
-    $scope.touchHandler = cdTouch.handle;
-    $scope.src = cdImageSource.getSources;
-    $scope.currentSrc = cdImageSource.getCurrent;
+    this.touchHandler = cdTouch.handle;
+    this.src = cdImageSource.getSources;
+    this.currentSrc = cdImageSource.getCurrent;
+    this.width = cdZoom.getZoomLevel;
 }
-cdImageCtrl.$inject = ['$scope', 'cdTouch', 'cdImageSource'];
-cda.controller('cdImageCtrl', cdImageCtrl);
+angular.module('cda').controller('cdImageCtrl', cdImageCtrl);

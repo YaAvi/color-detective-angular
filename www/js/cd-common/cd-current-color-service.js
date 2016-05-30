@@ -1,6 +1,6 @@
-cda.factory('cdCurrentColor', function () {
+angular.module('cda').service('cdCurrentColor', function () {
     'use strict';
-    var currentColor = {name: 'Color', r: 119, g: 119, b: 119, style: {color: 'rgb(119, 119, 119)'}},
+    var currentColor,
         get = function () {
             return currentColor;
         },
@@ -8,7 +8,7 @@ cda.factory('cdCurrentColor', function () {
             currentColor = color;
         };
     return {
-        get: get,
-        set: set
+        getColor: get,
+        setColor: set
     };
 });

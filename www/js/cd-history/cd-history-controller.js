@@ -1,8 +1,8 @@
-function cdHistoryCtrl($scope, cdHistory) {
+function cdHistoryCtrl(cdHistory) {
     'use strict';
-    $scope.history = cdHistory.history();
-    $scope.delOne = cdHistory.remove;
-    $scope.delAll = cdHistory.removeAll;
+    this.history = cdHistory.history();
+    this.historyIsOpened = cdHistory.historyIsOpened;
+    this.delOne = cdHistory.remove;
+    this.delAll = cdHistory.removeAll;
 }
-cdHistoryCtrl.$inject = ['$scope', 'cdHistory'];
-cda.controller('cdHistoryCtrl', cdHistoryCtrl);
+angular.module('cda').controller('cdHistoryCtrl', cdHistoryCtrl);

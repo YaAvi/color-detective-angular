@@ -1,0 +1,66 @@
+.history {
+    position: fixed;
+    top: 50px;
+    left: -190px;
+    width: 190px;
+    transition: all .2s ease;
+    z-index: 100;
+    background-color: rgba(77, 77, 77, 0.5);
+    bottom: 134px;
+    overflow: auto;
+}
+
+.open-history {
+    transform: translate3d(190px, 0, 0);
+}
+
+.close-history {
+    transform: translate3d(-190px, 0, 0);
+}
+
+.color-samples {
+    width: 180px;
+    height: 50px;
+    z-index: 101;
+    margin: 2px 5px;
+    position: initial;
+    float: left;
+}
+
+.color-name {
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 3px;
+}
+
+.color-hex {
+    text-align: right;
+    width: 59%;
+    padding-top: 10px;
+    padding-right: 3px;
+    float: right;
+}
+
+.del-buttons {
+    margin: 5px;
+}
+
+.del-one {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.del-all {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.del-one:active > .material-icons {
+    transform: scale(0.7);
+}
+
+.del-all:active > .material-icons {
+    transform: scale(0.7);
+}

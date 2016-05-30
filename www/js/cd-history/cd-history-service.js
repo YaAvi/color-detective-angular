@@ -1,24 +1,14 @@
-cda.factory('cdHistory', ['$rootScope', function ($rootScope) {
+angular.module('cda').factory('cdHistory', function () {
     'use strict';
     var colorHistory = [],
-        history = document.querySelector('#history'),
         open = false,
-        openHistory = function () {
-            history.className = 'open-history';
-            open = true;
-        },
         closeHistory = function () {
-            history.className = 'close-history';
             open = false;
         },
         historyButton = function () {
-            if (!open) {
-                openHistory();
-            } else {
-                closeHistory();
-            }
+            open = !open;
         },
-        colorExist = function (colorSample) {
+        indexOfColor = function (colorSample) {
             if (colorHistory.length > 0) {
                 for (var i = 0; i < colorHistory.length; i++) {
                     if (colorSample.style.color === colorHistory[i].style.color) {
@@ -30,7 +20,7 @@ cda.factory('cdHistory', ['$rootScope', function ($rootScope) {
             return -1;
         },
         add = function (colorSample) {
-            var index = colorExist(colorSample);
+            var index = indexOfColor(colorSample);
             if (index >= 0) {
                 var color = colorHistory.splice(index, 1)[0];
                 colorHistory.unshift(color);
@@ -49,6 +39,12 @@ cda.factory('cdHistory', ['$rootScope', function ($rootScope) {
         },
         getColorHistory = function () {
             return colorHistory;
+        },
+        isOpen = function () {
+            if (open) {
+                return 'open-history'
+            }
+            return 'close-history';
         };
     return {
         button: historyButton,
@@ -56,6 +52,7 @@ cda.factory('cdHistory', ['$rootScope', function ($rootScope) {
         remove: remove,
         removeAll: removeAll,
         history: getColorHistory,
-        close: closeHistory
+        close: closeHistory,
+        historyIsOpened: isOpen
     };
-}]);
+});

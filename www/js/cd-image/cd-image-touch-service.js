@@ -1,7 +1,6 @@
-function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, statusbar, cdRgbToHex, cdFontColor) {
+function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, cdRgbToHex, cdFontColor) {
     'use strict';
-    var image = document.getElementById('camImage'),
-        mainColor = document.getElementById('color'),
+    var image = document.getElementById('image'),
         touchHandler = function (e) {
             var pColor,
                 imageBounds = image.getBoundingClientRect(),
@@ -27,10 +26,11 @@ function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, statusbar, cdRgbToHex
                         }
                     };
                 cdHistory.add(color);
-                cdCurrentColor.set(color);
-                statusbar.backgroundColorByHexString(cdRgbToHex.rgbToHex((color.r - 30 < 0) ? 0 : color.r - 30,
-                                                                         (color.g - 30 < 0) ? 0 : color.g - 30,
-                                                                         (color.b - 30 < 0) ? 0 : color.b - 30));
+                cdCurrentColor.setColor(color);
+                
+                $cordovaStatusbar.styleHex(cdRgbToHex.rgbToHex((color.r - 30 < 0) ? 0 : color.r - 30,
+                                                                (color.g - 30 < 0) ? 0 : color.g - 30,
+                                                                (color.b - 30 < 0) ? 0 : color.b - 30));
             }
         };
 
@@ -38,5 +38,4 @@ function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, statusbar, cdRgbToHex
         handle: touchHandler
     };
 }
-cdTouch.$inject = ['cdHistory', 'cdDetectColor', 'cdCurrentColor', 'statusbar', 'cdRgbToHex', 'cdFontColor'];
-cda.factory('cdTouch', cdTouch);
+angular.module('cda').factory('cdTouch', cdTouch);

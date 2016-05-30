@@ -1,0 +1,34 @@
+.image-url {
+    position: fixed;
+    bottom: -70px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    transition: all .15s ease;
+    background-color: dimgrey;
+}
+
+.open-url {
+    transform: translate3d(0, -70px, 0);
+}
+
+.close-url {
+    transform: translate3d(0, 70px, 0);
+}
+
+.url-input {
+    margin: 15px 7px;
+    padding: 10px;
+    width: 77%;
+}
+
+.url-confirm {
+    float: right;
+    padding: 20px 6px;
+    background-color: #737373;
+}
+
+.url-confirm:active > .material-icons {
+    transform: scale(0.7);
+}

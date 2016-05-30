@@ -1,19 +1,17 @@
-cda.factory('cdUrl', ['cdImageSource', function (cdImageSource) {
+angular.module('cda').factory('cdUrl', function (cdImageSource) {
     'use strict';
-    var urlInput = document.getElementById('url-input'),
-        imageUrl = document.getElementById('image-url');
+    var urlBoxOpen = false;
     function checkURL(url) {
         return (url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
     }
     
     function urlHandle() {
-        imageUrl.className = 'open-url';
+        urlBoxOpen = true;
     }
     function closeUrl() {
-        imageUrl.className = 'close-url';
+        urlBoxOpen = false;
     }
-    function confirmUrl() {
-        var url = urlInput.value;
+    function confirmUrl(url) {
         if (url) {
             if (checkURL(url) && url !== "") {
                 cdImageSource.add(url);
@@ -23,10 +21,16 @@ cda.factory('cdUrl', ['cdImageSource', function (cdImageSource) {
         }
         closeUrl();
     }
-    
+    function getUrlBoxState() {
+        if (urlBoxOpen) {
+            return 'open-url';
+        }
+        return 'close-url';
+    }
     return {
         confirm: confirmUrl,
+        getUrlBoxState: getUrlBoxState,
         openBox: urlHandle,
         close: closeUrl
     };
-}]);
+});

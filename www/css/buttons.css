@@ -1,0 +1,13 @@
+.button-div {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.button {
+    width: 20%;
+    padding: 17px 0;
+    text-align: center;
+    float: left;
+    background-color: #696969;
+}

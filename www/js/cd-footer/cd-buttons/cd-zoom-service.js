@@ -1,34 +1,49 @@
-cda.factory('cdZoom', function () {
+angular.module('cda').factory('cdZoom', function () {
     'use strict';
-    var image = document.getElementById('camImage'),
-        zoomOut = document.getElementById('zoom-out-button'),
-        zoomIn = document.getElementById('zoom-in-button'),
+    var zoomOutEnabled = true,
+        zoomInEnabled = true,
         zoomLevel = 100,
         zoomOffset = 25;
     
     function zoomInHandle() {
         if (zoomLevel < 250) {
             zoomLevel += zoomOffset;
-            image.style.width = zoomLevel + "%";
-            zoomOut.className = "enabled button";
+            zoomOutEnabled = true;
         }
         if (zoomLevel === 250) {
-            zoomIn.className = "disabled button";
+            zoomInEnabled = false;
         }
     }
     function zoomOutHandle() {
         if (zoomLevel > 50) {
             zoomLevel -= zoomOffset;
-            image.style.width = zoomLevel + "%";
-            zoomIn.className = "enabled button";
+            zoomInEnabled = true;
         }
         if (zoomLevel === 50) {
-            zoomOut.className = "disabled button";
+            zoomOutEnabled = false;
         }
+    }
+    function zoomInState() {
+        if (zoomInEnabled) {
+            return 'enabled';
+        }
+        return 'disabled';
+    }
+    function zoomOutState() {
+        if (zoomOutEnabled) {
+            return 'enabled';
+        }
+        return 'disabled';
+    }
+    function getZoomLevel() {
+        return zoomLevel + '%';
     }
     
     return {
         zoomIn: zoomInHandle,
-        zoomOut: zoomOutHandle
+        zoomOut: zoomOutHandle,
+        zoomInState: zoomInState,
+        zoomOutState: zoomOutState,
+        getZoomLevel: getZoomLevel
     };
 });

@@ -5,9 +5,6 @@
     <title>Color Detective</title>
     <meta http-equiv="Content-Security-Policy" content="default-src *; img-src * 'self' 'unsafe-inline' data:; style-src * 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/color.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" href="fonts/material/material-icons.css">
     
 </head>
@@ -15,48 +12,14 @@
 <body id="app" ng-cloak ng-controller="cdBackButton">
     <div><cd-head/></div>
 
-    <div id="history" ng-controller="cdHistoryCtrl">
-        <div id="del-buttons">
-            <div id="del-one" ng-click="delOne()"><i class="material-icons">&#xE872;</i></div>
-            <div id="del-all" ng-click="delAll()"><i class="material-icons">&#xE92B;</i></div>
-        </div>
-        <div id="color-samples" ng-repeat="color in history" class="color-samples"  style="background-color:{{color.style.color}}; color:{{color.style.font}}">
-            <cd-color-sample color="color"/>
-        </div>
-    </div>
+    <div><cd-history-box/></div>
     
-    <div class="zoomable" ng-controller="cdImageCtrl" >
-        <img  mn-touch secure-tap="touchHandler($event)" id="camImage" src="{{src()[currentSrc()]}}" />
-    </div>
+    <div><cd-image/></div>
 
     <div><cd-footer/></div>
     
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/angular/angular.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/angular/angular-animate.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/dist/mn-touch.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-detect-color-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-current-color-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-rgb-to-hex.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-font-color.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-common/cd-back-button.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-head/cd-head-directives.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-head/cd-head-controller.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-image/cd-image-touch-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-image/cd-image-source-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-image/cd-image-controller.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-controller.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-history/cd-history-directives.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-data/cd-data.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-footer-controller.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-footer-directives.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-zoom-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-url-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-camera-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-gallery-service.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/cd-footer/cd-buttons/cd-tts-service.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/bundle.js"></script>
 
 </body>
 

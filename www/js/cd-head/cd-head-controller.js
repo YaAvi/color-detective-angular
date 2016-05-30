@@ -1,11 +1,9 @@
-function cdHeadCtrl($scope, cdHistory, cdCurrentColor, cdImageSource) {
-    'use strict';
-    $scope.historyButton = cdHistory.button;
-    $scope.color = cdCurrentColor.get;
-    $scope.next = cdImageSource.next;
-    $scope.prev = cdImageSource.prev;
-    $scope.first = cdImageSource.first;
-    $scope.last = cdImageSource.last;
+function cdHeadCtrl(cdHistory, cdCurrentColor, cdImageSource) {
+    this.historyButton = cdHistory.button;
+    this.color = cdCurrentColor.getColor;
+    this.next = cdImageSource.next;
+    this.prev = cdImageSource.prev;
+    this.getPrevButtonState = cdImageSource.getPrevButtonState;
+    this.getNextButtonState = cdImageSource.getNextButtonState;
 }
-cdHeadCtrl.$inject = ['$scope', 'cdHistory', 'cdCurrentColor', 'cdImageSource'];
-cda.controller('cdHeadCtrl', cdHeadCtrl);
+angular.module('cda').controller('cdHeadCtrl', cdHeadCtrl);

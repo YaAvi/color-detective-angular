@@ -1,4 +1,4 @@
-cda.factory('cdTTS', ['TTS', function (TTS) {
+angular.module('cda').factory('cdTTS', function (TTS) {
     'use strict';
     function speakColor(colorName) {
         TTS.speak({
@@ -15,4 +15,4 @@ cda.factory('cdTTS', ['TTS', function (TTS) {
     return {
         speakColor: speakColor
     };
-}]);
+});

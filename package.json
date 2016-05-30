@@ -1,0 +1,32 @@
+{
+  "name": "color-detective-angular",
+  "version": "1.0.0",
+  "description": "A color picker angular project.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "webpack -d && cordova run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaAvi/color-detective-angular.git"
+  },
+  "author": "ANY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaAvi/color-detective-angular/issues"
+  },
+  "homepage": "https://github.com/YaAvi/color-detective-angular#readme",
+  "devDependencies": {
+    "cordova-minify": "0.0.15",
+    "css-loader": "^0.23.1",
+    "ng-annotate-loader": "^0.1.0",
+    "style-loader": "^0.13.1"
+  },
+  "dependencies": {
+    "clean-css": "^3.4.13",
+    "imagemin": "^4.0.0",
+    "uglify-js": "^2.6.2",
+    "webpack": "^1.13.1"
+  }
+}
