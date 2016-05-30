@@ -23,13 +23,13 @@ angular.module('cda').factory('cdHistory', function () {
             var index = indexOfColor(colorSample);
             if (index >= 0) {
                 var color = colorHistory.splice(index, 1)[0];
-                colorHistory.unshift(color);
+                colorHistory.push(color);
             } else {
-                colorHistory.unshift(colorSample);
+                colorHistory.push(colorSample);
             }
         },
         remove = function () {
-            colorHistory.shift();
+            colorHistory.pop();
         },
         removeAll = function () {
             var len = colorHistory.length;

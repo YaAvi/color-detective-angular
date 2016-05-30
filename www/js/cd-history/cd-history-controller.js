@@ -4,5 +4,6 @@ function cdHistoryCtrl(cdHistory) {
     this.historyIsOpened = cdHistory.historyIsOpened;
     this.delOne = cdHistory.remove;
     this.delAll = cdHistory.removeAll;
+    this.reverse = true;
 }
 angular.module('cda').controller('cdHistoryCtrl', cdHistoryCtrl);
