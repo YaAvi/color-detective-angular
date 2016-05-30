@@ -4,6 +4,7 @@
   "description": "A color picker angular project.",
   "main": "index.js",
   "scripts": {
+    "release": "webpack && cordova build --release",
     "deploy": "webpack -d && cordova run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
