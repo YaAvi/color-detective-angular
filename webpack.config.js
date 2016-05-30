@@ -7,7 +7,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.css$/, loader: "style-loader!css-loader" },
-            {test: /www.*\.js$/, loaders: ['ng-annotate']}
+            {test: /www.*\.js$/, loaders: ['ng-annotate?single_quotes=true']}
         ]
     },
     plugins: []
