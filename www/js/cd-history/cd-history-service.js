@@ -9,13 +9,10 @@ angular.module('cda').factory('cdHistory', function () {
             open = !open;
         },
         indexOfColor = function (colorSample) {
-            if (colorHistory.length > 0) {
-                for (var i = 0; i < colorHistory.length; i++) {
-                    if (colorSample.style.color === colorHistory[i].style.color) {
-                        return i;
-                    }
+            for (var i = 0; i < colorHistory.length; i++) {
+                if (colorSample.style.color === colorHistory[i].style.color) {
+                    return i;
                 }
-                return -1;
             }
             return -1;
         },
