@@ -1,8 +1,8 @@
 function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, cdRgbToHex, cdFontColor) {
     'use strict';
-    var image = document.getElementById('image'),
-        touchHandler = function (e) {
-            var pColor,
+        var touchHandler = function (e) {
+            var image = e.target,
+                pColor,
                 imageBounds = image.getBoundingClientRect(),
                 xCord = e.coords.start.x,
                 yCord = e.coords.start.y,
