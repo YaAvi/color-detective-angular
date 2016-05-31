@@ -5,3 +5,4 @@ angular.module('cda').directive('cdHistoryButton', function () {
         templateUrl: 'js/cd-head/templates/cd-history-button-template.html'
     };
 });
+
