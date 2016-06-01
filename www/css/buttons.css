@@ -6,13 +6,19 @@
 
 .button {
     width: 20%;
-    padding: 17px 0;
     text-align: center;
     float: left;
-    background-color: #696969;
 }
 
-div[disabled] {
+button {
+    color: inherit;
+    border: none;
+    outline: none;
+    padding: 19px 0;
+    background-color: inherit;
+}
+
+button[disabled] {
     pointer-events: none;
     color: #777;
 }

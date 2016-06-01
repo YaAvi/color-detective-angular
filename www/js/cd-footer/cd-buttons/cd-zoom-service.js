@@ -23,10 +23,10 @@ angular.module('cda').factory('cdZoom', function () {
             zoomOutEnabled = false;
         }
     }
-    function zoomInState() {
+    function isZoomInEnabled() {
         return zoomInEnabled;
     }
-    function zoomOutState() {
+    function isZoomOutEnabled() {
         return zoomOutEnabled;
     }
     function getZoomLevel() {
@@ -36,8 +36,8 @@ angular.module('cda').factory('cdZoom', function () {
     return {
         zoomIn: zoomInHandle,
         zoomOut: zoomOutHandle,
-        zoomInState: zoomInState,
-        zoomOutState: zoomOutState,
+        zoomInEnabled: isZoomInEnabled,
+        zoomOutEnabled: isZoomOutEnabled,
         getZoomLevel: getZoomLevel
     };
 });

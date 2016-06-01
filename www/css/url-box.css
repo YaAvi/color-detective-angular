@@ -18,14 +18,14 @@
 }
 
 .url-input {
-    margin: 15px 7px;
-    padding: 10px;
+    margin: 13px 4px;
+    padding: 13px;
     width: 77%;
 }
 
 .url-confirm {
     float: right;
-    padding: 20px 6px;
+    padding: 20px 8px;
     background-color: #737373;
 }
 

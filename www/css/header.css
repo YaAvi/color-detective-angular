@@ -11,9 +11,9 @@
 }
 
 .history-button {
-    padding: 9px 4px;
+    padding: 10px 4px;
     float: left;
-    width: 10%;
+    width: 12%;
 }
 
 .history-button:active > .material-icons {
@@ -28,8 +28,8 @@
 }
 
 .prev-button {
-    width: 10%;
-    padding: 9px 4px;
+    width: 12%;
+    padding: 10px 4px;
     float: right;
 }
 
@@ -38,8 +38,8 @@
 }
 
 .next-button {
-    width: 10%;
-    padding: 9px 4px;
+    width: 12%;
+    padding: 10px 4px;
     float: right;
 }
 
@@ -48,9 +48,9 @@
 }
 
 .donate {
-    padding: 9px 4px;
+    padding: 10px 4px;
     float: right;
-    width: 10%;
+    width: 12%;
 }
 
 .donate:active > .material-icons {

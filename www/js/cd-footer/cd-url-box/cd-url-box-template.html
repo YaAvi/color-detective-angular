@@ -1,4 +1,4 @@
 <div ng-class="[footer.urlBoxState(), 'image-url']" style="background-color:rgb({{footer.color().r-30}},{{footer.color().g-30}},{{footer.color().b-30}});">
     <input type="text" class="url-input" ng-model="urlInput" placeholder="image url">
-    <div class="url-confirm" style="background-color:rgb({{footer.color().r-15}},{{footer.color().g-15}},{{footer.color().b-15}});" ng-click="footer.confirm(urlInput)"><i class="material-icons">&#xE163;</i></div>
+    <button class="url-confirm" style="background-color:rgb({{footer.color().r-15}},{{footer.color().g-15}},{{footer.color().b-15}});" ng-click="footer.confirm(urlInput)"><i class="material-icons">&#xE163;</i></button>
 </div>

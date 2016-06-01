@@ -29,16 +29,10 @@ angular.module('cda').factory('cdImageSource', function () {
         }
     }
     function getNextButtonState() {
-        if (current === sources.length -1) {
-            return true;
-        }
-        return false;
+        return current === sources.length - 1;
     }
     function getPrevButtonState() {
-        if (current === 0) {
-            return true;
-        }
-        return false;
+        return current === 0;
     }
     return {
         add: add,

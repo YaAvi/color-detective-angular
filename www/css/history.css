@@ -10,7 +10,7 @@
     overflow: auto;
 }
 
-.open-history {
+.open.history {
     transform: translate3d(190px, 0, 0);
 }
 
