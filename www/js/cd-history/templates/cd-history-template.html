@@ -4,6 +4,6 @@
         <div class="del-all" ng-click="history.delAll()"><i class="material-icons">&#xE92B;</i></div>
     </div>
     <div class="color-samples" ng-repeat="color in history.history | reverse" class="color-samples" style="background-color:{{color.style.color}}; color:{{color.style.font}}">
-        <cd-color-sample></cd-color-sample>
+        <cd-color-sample color="color"></cd-color-sample>
     </div>
 </div>
