@@ -21,8 +21,12 @@
   "devDependencies": {
     "cordova-minify": "0.0.15",
     "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "iconfont-loader": "0.0.1",
+    "icons-loader": "0.0.6",
     "ng-annotate-loader": "^0.1.0",
-    "style-loader": "^0.13.1"
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
   },
   "dependencies": {
     "clean-css": "^3.4.13",

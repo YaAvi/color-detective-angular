@@ -1,6 +1,6 @@
-<div ng-class="[head.getNextButtonState(), 'next-button']" ng-click="head.next()">
+<div class="next-button" ng-disabled="head.getNextButtonState()" ng-click="head.next()">
     <i class="material-icons">&#xE315;</i>
 </div>
-<div ng-class="[head.getPrevButtonState(), 'prev-button']" ng-click="head.prev()">
+<div class="prev-button" ng-disabled="head.getPrevButtonState()" ng-click="head.prev()">
     <i class="material-icons">&#xE314;</i>
 </div>

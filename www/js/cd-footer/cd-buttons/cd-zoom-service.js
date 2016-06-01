@@ -24,16 +24,10 @@ angular.module('cda').factory('cdZoom', function () {
         }
     }
     function zoomInState() {
-        if (zoomInEnabled) {
-            return 'enabled';
-        }
-        return 'disabled';
+        return zoomInEnabled;
     }
     function zoomOutState() {
-        if (zoomOutEnabled) {
-            return 'enabled';
-        }
-        return 'disabled';
+        return zoomOutEnabled;
     }
     function getZoomLevel() {
         return zoomLevel + '%';

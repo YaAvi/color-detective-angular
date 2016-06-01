@@ -4,9 +4,6 @@ angular.module('cda').directive('cdHistoryBox', function () {
         restrict: 'E',
         controller:'cdHistoryCtrl',
         controllerAs: 'history',
-        templateUrl: 'js/cd-history/templates/cd-history-template.html',
-        scope: {
-            color: '='
-        }
+        templateUrl: 'js/cd-history/templates/cd-history-template.html'
     };
 });

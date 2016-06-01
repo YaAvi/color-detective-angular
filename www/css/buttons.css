@@ -11,3 +11,8 @@
     float: left;
     background-color: #696969;
 }
+
+div[disabled] {
+    pointer-events: none;
+    color: #777;
+}

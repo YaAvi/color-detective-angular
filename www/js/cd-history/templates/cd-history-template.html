@@ -1,9 +1,9 @@
-<div ng-class="[history.historyIsOpened(), 'history']">
+<div class="history" ng-class="{'open-history': history.historyIsOpened()}">
     <div class="del-buttons">
         <div class="del-one" ng-click="history.delOne()"><i class="material-icons">&#xE872;</i></div>
         <div class="del-all" ng-click="history.delAll()"><i class="material-icons">&#xE92B;</i></div>
     </div>
     <div class="color-samples" ng-repeat="color in history.history | reverse" class="color-samples" style="background-color:{{color.style.color}}; color:{{color.style.font}}">
-        <cd-color-sample color="color" />
+        <cd-color-sample></cd-color-sample>
     </div>
 </div>

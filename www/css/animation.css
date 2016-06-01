@@ -1,17 +1,20 @@
 /*---------------- ANIMATIONS ---------------*/
 
 .color-samples.ng-enter,
-.color-samples.ng-leave {
+.color-samples.ng-leave,
+.color-samples.ng-move {
     transition: margin 300ms;
     -webkit-animation-duration: 700ms;
     animation-duration: 700ms;
 }
 
 .color-samples.ng-enter,
+.color-samples.ng-move,
 .color-samples.ng-leave-active {
     margin-bottom: -52px;
 }
-.color-samples.ng-enter-active {
+.color-samples.ng-enter-active,
+.color-samples.ng-move-active {
     margin-bottom: 2px;
 }
 .color-samples.ng-enter {
@@ -22,8 +25,14 @@
     -webkit-animation-name: rollOut;
     animation-name: rollOut;
 }
+.color-samples.ng-move-active {
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
+}
+
 .ng-enter-stagger,
-.ng-leave-stagger {
+.ng-leave-stagger,
+.ng-move-stagger {
     transition-delay: 150ms;
     transition-duration: 0;
     -webkit-animation-delay: 150ms;

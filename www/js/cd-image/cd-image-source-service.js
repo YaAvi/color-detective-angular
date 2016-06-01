@@ -30,15 +30,15 @@ angular.module('cda').factory('cdImageSource', function () {
     }
     function getNextButtonState() {
         if (current === sources.length -1) {
-            return 'disabled';
+            return true;
         }
-        return 'enabled';
+        return false;
     }
     function getPrevButtonState() {
         if (current === 0) {
-            return 'disabled';
+            return true;
         }
-        return 'enabled';
+        return false;
     }
     return {
         add: add,

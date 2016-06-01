@@ -38,10 +38,7 @@ angular.module('cda').factory('cdHistory', function () {
             return colorHistory;
         },
         isOpen = function () {
-            if (open) {
-                return 'open-history'
-            }
-            return 'close-history';
+            return open;
         };
     return {
         button: historyButton,
