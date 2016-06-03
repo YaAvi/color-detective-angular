@@ -1,4 +1,4 @@
-<div ng-class="[$ctrl.urlBoxState(), 'image-url']" style="background-color:rgb({{$ctrl.color().r-30}},{{$ctrl.color().g-30}},{{$ctrl.color().b-30}});">
+<div ng-class="{'open-url': $ctrl.isUrlBoxOpen()}" class="image-url" style="background-color:rgb({{$ctrl.color().r-30}},{{$ctrl.color().g-30}},{{$ctrl.color().b-30}});">
     <input type="text" class="url-input" ng-model="urlInput" placeholder="image url">
     <button class="url-confirm" style="background-color:rgb({{$ctrl.color().r-15}},{{$ctrl.color().g-15}},{{$ctrl.color().b-15}});" ng-click="$ctrl.confirm(urlInput)"><i class="material-icons">&#xE163;</i></button>
 </div>

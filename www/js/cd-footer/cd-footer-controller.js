@@ -6,7 +6,7 @@ function cdFooterCtrl(cdCurrentColor, cdZoom, cdUrl, cdOpenImage, cdTTS) {
     this.zoomOutEnabled = cdZoom.zoomOutEnabled;
     this.openBox = cdUrl.openBox;
     this.confirm = cdUrl.confirm;
-    this.urlBoxState = cdUrl.getUrlBoxState;
+    this.isUrlBoxOpen = cdUrl.isUrlBoxOpen;
     this.openImage = cdOpenImage.openImage;
     this.speak = cdTTS.speakColor;
     this.showRgb = true;

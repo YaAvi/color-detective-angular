@@ -1,19 +1,19 @@
 angular.module('cda').factory('cdUrl', function (cdImageSource) {
     'use strict';
-    var urlBoxOpen = false;
-    function checkURL(url) {
-        return (url.match(/\.(jpeg|jpg|gif|png)$/) !== null);
+    var urlBoxIsOpen = false;
+    function urlIsValid(url) {
+        return (url.match(/\.(jpeg|jpg|gif|png|svg)$/) !== null && url !== "");
     }
     
     function urlHandle() {
-        urlBoxOpen = true;
+        urlBoxIsOpen = true;
     }
     function closeUrl() {
-        urlBoxOpen = false;
+        urlBoxIsOpen = false;
     }
     function confirmUrl(url) {
         if (url) {
-            if (checkURL(url) && url !== "") {
+            if (urlIsValid(url)) {
                 cdImageSource.add(url);
             } else {
                 window.alert("Not an image URL!");
@@ -21,15 +21,12 @@ angular.module('cda').factory('cdUrl', function (cdImageSource) {
         }
         closeUrl();
     }
-    function getUrlBoxState() {
-        if (urlBoxOpen) {
-            return 'open-url';
-        }
-        return 'close-url';
+    function isUrlBoxOpen() {
+        return urlBoxIsOpen;
     }
     return {
         confirm: confirmUrl,
-        getUrlBoxState: getUrlBoxState,
+        isUrlBoxOpen: isUrlBoxOpen,
         openBox: urlHandle,
         close: closeUrl
     };

@@ -1,4 +1,4 @@
-<div class="history" ng-class="{'open': $ctrl.historyIsOpened()}">
+<div class="history" ng-class="{'open': $ctrl.historyIsOpened()}" style="background-color:rgba({{$ctrl.color().r-40}},{{$ctrl.color().g-40}},{{$ctrl.color().b-40}}, 0.7); color:{{$ctrl.color().style.font}}">
     <div class="del-buttons">
         <div class="del-one" ng-click="$ctrl.delOne()"><i class="material-icons">&#xE872;</i></div>
         <div class="del-all" ng-click="$ctrl.delAll()"><i class="material-icons">&#xE92B;</i></div>

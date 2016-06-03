@@ -13,10 +13,6 @@
     transform: translate3d(0, -70px, 0);
 }
 
-.close-url {
-    transform: translate3d(0, 70px, 0);
-}
-
 .url-input {
     margin: 13px 4px;
     padding: 13px;
