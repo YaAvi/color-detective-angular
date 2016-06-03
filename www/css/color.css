@@ -3,17 +3,29 @@
     font-size: 1em;
     position: absolute;
     bottom: 69px;
-    padding: 23px 0 23px 0;
+    height: 65px;
     text-align: center;
     background-color: #777777;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.color p {
+.color-name-div {
+    float: left;
+    width: 60%;
+    padding: 23px 0px;
+}
+
+.color-rgb,
+.color-hex {
+    float: left;
+    width: 40%;
+    padding: 23px 0px;
+}
+
+.color-name-div {
     transition: all .1s ease-out;
 }
 
-.color p:active {
+.color-name-div:active {
     transform: scale(1.3);
 }
-

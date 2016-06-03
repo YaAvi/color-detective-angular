@@ -1,4 +1,4 @@
-function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, cdRgbToHex, cdFontColor) {
+function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, $cordovaRecents, cdRgbToHex, cdFontColor) {
     'use strict';
         var touchHandler = function (e) {
             var image = e.target,
@@ -15,10 +15,14 @@ function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, cd
             pColor = ctx.getImageData(xCord - imageBounds.left, yCord, 1, 1).data;
             if (pColor[3] !== 0) {
                 var rgb = 'rgb(' + pColor[0] + ', ' + pColor[1] + ', ' + pColor[2] + ')',
+                    colorInHex = cdRgbToHex.rgbToHex((pColor[0] - 30 < 0) ? 0 : pColor[0] - 30,
+                                                    (pColor[1] - 30 < 0) ? 0 : pColor[1] - 30,
+                                                    (pColor[2] - 30 < 0) ? 0 : pColor[2] - 30),
                     color = {
                         r: pColor[0],
                         g: pColor[1],
                         b: pColor[2],
+                        hex: colorInHex,
                         name: cdDetectColor.name(pColor[0], pColor[1], pColor[2]),
                         style: {
                             color: rgb,
@@ -27,10 +31,8 @@ function cdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaStatusbar, cd
                     };
                 cdHistory.add(color);
                 cdCurrentColor.setColor(color);
-                
-                $cordovaStatusbar.styleHex(cdRgbToHex.rgbToHex((color.r - 30 < 0) ? 0 : color.r - 30,
-                                                                (color.g - 30 < 0) ? 0 : color.g - 30,
-                                                                (color.b - 30 < 0) ? 0 : color.b - 30));
+                $cordovaStatusbar.styleHex(color.hex);
+                $cordovaRecents.setColor(color.hex);
             }
         };
 

@@ -9,5 +9,6 @@ function cdFooterCtrl(cdCurrentColor, cdZoom, cdUrl, cdOpenImage, cdTTS) {
     this.urlBoxState = cdUrl.getUrlBoxState;
     this.openImage = cdOpenImage.openImage;
     this.speak = cdTTS.speakColor;
+    this.showRgb = true;
 }
 angular.module('cda').controller('cdFooterCtrl', cdFooterCtrl);

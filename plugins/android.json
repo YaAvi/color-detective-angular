@@ -21,6 +21,9 @@
         },
         "cordova-plugin-tts": {
             "PACKAGE_NAME": "com.hoy.colordetective"
+        },
+        "cordova-plugin-recentscontrol": {
+            "PACKAGE_NAME": "com.hoy.colordetective"
         }
     },
     "dependent_plugins": {}
